@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int number;
+
+    // Get input from the user
+    cout << "Enter a positive integer between 999 and 999999: ";
+    cin >> number;
+
+    // Input validation
+    while (number < 999 || number > 999999) {
+        cout << "Invalid input. Please enter a number within the specified range: ";
+        cin >> number;
+    }
+
+    //  Variables to track the largest digit
+    int largestDigit = 0;
+    int currentDigit;
+
+    // Iterate through each digit of the number
+    while (number > 0) {
+        currentDigit = number % 10;  // Extract the last digit
+        if (currentDigit > largestDigit) {  // Update largestDigit if necessary
+            largestDigit = currentDigit;
+        }
+        number /= 10;  // Remove the last digit
+    }
+
+    // Result
+    cout << "The largest digit = " << largestDigit << endl;
+    
+    system("pause");
+    return 0;
+}
