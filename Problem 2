@@ -1,0 +1,38 @@
+//nafs awel problem bas u have to change largest to smallest and make smallest equal to 10 since no (1 digit) number is going to be bigger than (10)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int number;
+
+    // Get input from the user
+    cout << "Enter a positive integer between 999 and 999999: ";
+    cin >> number;
+
+    // Input validation
+    while (number < 999 || number > 999999) {
+        cout << "Invalid input. Please enter a number within the specified range: ";
+        cin >> number;
+    }
+
+    //  Variables to track the largest digit
+    int smallestDigit = 10;
+    int currentDigit;
+
+    // Iterate through each digit of the number
+    while (number > 0) {
+        currentDigit = number % 10;  // Extract the last digit
+        if (currentDigit < smallestDigit) {  // Update largestDigit if necessary
+            smallestDigit = currentDigit;
+        }
+        number /= 10;  // Remove the last digit
+    }
+
+    // Result
+    cout << "The smallest digit = " << smallestDigit << endl;
+    
+    system("pause");
+    return 0;
+}
