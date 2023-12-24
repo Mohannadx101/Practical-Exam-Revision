@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    //Declare
+    int number;
+    int sumOfDigitsDivisibleBy3 = 0;
+    int currentDigit;
+
+    // Inputs
+    cout << "Enter a positive integer between 999 and 999999: ";
+    cin >> number;
+
+    // Input validation
+    while (number < 999 || number > 999999) {
+        cout << "Invalid input. Please enter a number within the specified range: ";
+        cin >> number;
+    }
+
+    // Loops
+    while (number > 0) {
+        currentDigit = number % 10;  // Extract the last digit
+
+        // Check if the digit is divisible by 3 and add it to the sum
+        if (currentDigit % 3 == 0) {
+            sumOfDigitsDivisibleBy3 += currentDigit;
+        }
+
+        number /= 10;  // Remove the last digit
+    }
+
+    // Display the result
+    cout << "The sum of digits that are divisible by 3 = "
+        << sumOfDigitsDivisibleBy3 << endl;
+
+    system("pause");
+    return 0;
+}
