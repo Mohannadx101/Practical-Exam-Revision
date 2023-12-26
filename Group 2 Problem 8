@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int creditHours;
+
+	cout << "Enter the number of credit hours achieved: ";
+	cin >> creditHours;
+
+	// Determine the academic level based on the credit hours
+	if (creditHours < 28) {
+		cout << "Academic Level: 1" << endl;
+	}
+	else if (creditHours < 58) {
+		cout << "Academic Level: 2" << endl;
+	}
+	else if (creditHours < 89) {
+		cout << "Academic Level: 3" << endl;
+	}
+	else {
+		cout << "Academic Level: 4" << endl;
+	}
+
+	return 0;
+}
