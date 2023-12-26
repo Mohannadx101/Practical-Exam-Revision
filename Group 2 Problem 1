@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>  // Include the cmath library for the sqrt function
+
+using namespace std;
+
+int main() {
+    int m, n;
+
+    cout << "Enter two positive integers (m > n): ";
+    cin >> m >> n;
+
+    while (m <= n) {  // Ensure m > n
+        cout << "Invalid input. m must be greater than n. Please try again: ";
+        cin >> m >> n;
+    }
+
+    // Calculate the Pythagorean triple using the given formulas
+    int side1 = m * m - n * n;
+    int side2 = 2 * m * n;
+    double hypotenuse = sqrt(side1 * side1 + side2 * side2);
+
+    // Results
+    cout << "The Pythagorean triple for m = " << m << " and n = " << n << " is:\n";
+    cout << "Side1: " << side1 << endl;
+    cout << "Side2: " << side2 << endl;
+    cout << "Hypotenuse: " << hypotenuse << endl;
+
+    return 0;
+}
