@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	double income, taxOwed;
+
+	cout << "Enter your income: ";
+	cin >> income;
+
+	// Calculate the tax owed based on the income tax rate table
+	if (income < 10000) {
+		taxOwed = 0;  // 0% tax rate for income below 10000
+	}
+	else if (income < 30000) {
+		taxOwed = income * 0.03;  // 3% tax rate for income between 10000 and 29999
+	}
+	else if (income < 50000) {
+		taxOwed = income * 0.05;  // 5% tax rate for income between 30000 and 49999
+	}
+	else {
+		taxOwed = income * 0.1;  // 10% tax rate for income 50000 or above
+	}
+
+	// Display the tax owed
+	cout << "Tax owed: " << taxOwed << endl;
+
+	return 0;
+}
