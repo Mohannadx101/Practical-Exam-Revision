@@ -1,0 +1,63 @@
+// معرفش الطريقة دي مسموح تحل بيها ولا لا ف هتلاقي طريقة تانيه تحت
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int num1, num2, num3;
+
+	cout << "Enter three numbers: ";
+	cin >> num1 >> num2 >> num3;
+
+
+	int max_num = max({ num1, num2, num3 });
+	int min_num = min({ num1, num2, num3 });
+
+
+	cout << "The maximum number is: " << max_num << endl;
+	cout << "The minimum number is: " << min_num << endl;
+
+	return 0;
+}
+------------------------------------------------------------------------------------
+// SOLVING USING IF STATEMENTS
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int num1, num2, num3;
+
+    cout << "Enter three numbers: ";
+    cin >> num1 >> num2 >> num3;
+
+    // Find the maximum number using if statements
+    int max_num;
+    if (num1 >= num2 && num1 >= num3) {
+        max_num = num1;
+    }
+    else if (num2 >= num1 && num2 >= num3) {
+        max_num = num2;
+    }
+    else {
+        max_num = num3;
+    }
+
+    // Find the minimum number using if statements
+    int min_num;
+    if (num1 <= num2 && num1 <= num3) {
+        min_num = num1;
+    }
+    else if (num2 <= num1 && num2 <= num3) {
+        min_num = num2;
+    }
+    else {
+        min_num = num3;
+    }
+
+    // Display the results
+    cout << "The maximum number is: " << max_num << endl;
+    cout << "The minimum number is: " << min_num << endl;
+
+    return 0;
+}
