@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    cout << "USD   EURO\n---   -----\n"; 
+
+    for (int usd = 100; usd <= 300; usd += 50) {
+        double euro = 12.0 / 11.0 * usd;
+        cout << usd << "   " << euro << fixed << endl;
+    }
+
+    cout << "------------------------\n";
+}
