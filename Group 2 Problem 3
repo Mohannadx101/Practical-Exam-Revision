@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int distance_in_meters;
+    cout << "enter distance : " << endl;
+    cin >> distance_in_meters;
+
+    // Convert meters to kilometers and remaining meters
+    int kilometers = distance_in_meters / 1000;
+    int remaining_meters = distance_in_meters % 1000;
+
+    // Print the distance in kilometers and remaining meters
+    cout << "Distance to Mars: " << kilometers << " kilometers and "
+        << remaining_meters << " meters" << endl;
+    
+    system("pause");
+    return 0;
+}
