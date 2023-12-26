@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double money = 1000;  
+    double interestRate = 0.12;  
+    int years = 0;  // Counter for years
+
+    //double the money
+    double doubleAmount = money * 2;
+
+    // Loop until the money reaches the double amount
+    while (money < doubleAmount) {
+        // Calculate the interest earned in the current year
+        double interest = money * interestRate;
+
+        // Add the interest to the principal
+        money += interest;
+
+        // Increment the year counter
+        years++;
+    }
+
+    // Display the result
+    cout << "It will take " << years << " years for the deposit to double." << endl;
+
+    system("pause");
+    return 0;
+}
