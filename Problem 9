@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Fahrenheit  Celsius" << endl;  
+	cout << "---------  --------" << endl;
+
+	for (int fahr = 40; fahr <= 60; fahr += 5) {  
+		double celsius = (5.0 / 9.0) * (fahr - 32);  
+		cout << fahr << "       " << celsius << endl;  
+	}
+
+	cout << "----------------" << endl;
+}
