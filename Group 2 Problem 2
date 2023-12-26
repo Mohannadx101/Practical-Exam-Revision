@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int number;
+
+	cout << "Enter a positive integer between 0 and 9999: ";
+	cin >> number;
+
+	// Ensure the number is within the valid range
+	while (number < 0 || number > 9999) {
+		cout << "Invalid input. Please enter a number between 0 and 9999: ";
+		cin >> number;
+	}
+
+	// Check the number of digits
+	if (number < 10) {
+		cout << "One Big Digit!!" << endl;
+	}
+	else if (number < 100) {
+		cout << "Two Big Digits!!" << endl;
+	}
+	else if (number < 1000) {
+		cout << "Three Big Digits!!" << endl;
+	}
+	else {
+		cout << "More and more Big Digits!!" << endl;
+	}
+
+	system("pause");
+	return 0;
+}
